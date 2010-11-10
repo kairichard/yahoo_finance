@@ -1,7 +1,9 @@
 = yahoo_finance
 
-Description goes here.
+Description will come
 
+== Credit
+http://www.transparentech.com/opensource/yahoofinance 
 == Note on Patches/Pull Requests
  
 * Fork the project.
