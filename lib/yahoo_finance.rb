@@ -27,6 +27,8 @@ require 'csv'
 require 'date'
 require 'optparse'
 require 'ostruct'
+require 'open-uri'
+require 'yahoo_isin_exchange_mapper'
 
 # Was using this to test a theory about why requests would hang
 # randomly, but since upgrading to ruby 1.8.4, I haven't had many
@@ -589,8 +591,7 @@ if $0 == __FILE__
     end
   else
     $options.symbol.split( ',' ).each do |s|
-      YahooFinance::get_historical_quotes_days( s, 
-                                                $options.historical_days ) do
+      YahooFinance::get_historical_quotes_days( s,$options.historical_days ) do
         |row|
         puts "#{s},#{row.join(',')}"
       end

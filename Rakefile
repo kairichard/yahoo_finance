@@ -10,7 +10,7 @@ begin
     gem.email = "kai.richard.koenig@googlemail.com"
     gem.homepage = "http://github.com/kairichard/yahoo_finance"
     gem.authors = ["Kai Richard Koenig"]
-    #gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_dependency "nokogiri", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
