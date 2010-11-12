@@ -28,7 +28,7 @@ require 'date'
 require 'optparse'
 require 'ostruct'
 require 'open-uri'
-require 'yahoo_isin_exchange_mapper'
+require 'isin'
 
 # Was using this to test a theory about why requests would hang
 # randomly, but since upgrading to ruby 1.8.4, I haven't had many
