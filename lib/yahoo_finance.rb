@@ -436,11 +436,11 @@ module YahooFinance
     }
   end
 
-  def YahooFinance.get_historical_quotes( symbol, startDate, endDate )
+  def YahooFinance.get_historical_quotes( symbol_or_isin, startDate, endDate )
     rows = []
     rowct = 0
     gotchunk = false
-
+    symbol = YahooFinance::ISIN.new(symbol_or_isin).exchanges.first.yahoo_symbol
     #
     # Yahoo is only able to provide 200 data points at a time for Some
     # "international" markets.  We want to download all of the data

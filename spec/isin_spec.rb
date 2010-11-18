@@ -40,6 +40,7 @@ describe "YahooFinance ISIN" do
         end
         it "should return just what i need" do
             YahooFinance.get_HistoricalQuotes(@obj.exchanges.first.yahoo_symbol,Date.parse("2010-11-11"),Date.parse("2010-11-11")).first.close.should == 54.42
+            YahooFinance.get_HistoricalQuotes("BMW.DE",Date.parse("2010-11-11"),Date.parse("2010-11-11")).first.close.should == 54.42
         end
     end
 end
