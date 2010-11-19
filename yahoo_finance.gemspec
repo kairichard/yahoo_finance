@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{yahoo_finance}
-  s.version = "1.3.0"
+  s.version = "1.3.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kai Richard Koenig"]
-  s.date = %q{2010-11-11}
+  s.date = %q{2010-11-18}
   s.description = %q{It can retrieve current stock quote data or historical quote data.And other stuff as well}
   s.email = %q{kai.richard.koenig@googlemail.com}
   s.extra_rdoc_files = [
@@ -23,10 +23,14 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "autotest/discover.rb",
+     "lib/isin.rb",
      "lib/yahoo_finance.rb",
-     "lib/yahoo_isin_exchange_mapper.rb",
+     "spec/isin_spec.rb",
+     "spec/yahoo_finance_spec.rb",
      "test/helper.rb",
-     "test/test_yahoo_finance.rb"
+     "test/test_yahoo_finance.rb",
+     "yahoo_finance.gemspec"
   ]
   s.homepage = %q{http://github.com/kairichard/yahoo_finance}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -34,7 +38,9 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{It can retrieve current stock quote data or historical quote data.}
   s.test_files = [
-    "test/test_yahoo_finance.rb",
+    "spec/isin_spec.rb",
+     "spec/yahoo_finance_spec.rb",
+     "test/test_yahoo_finance.rb",
      "test/helper.rb"
   ]
 
