@@ -32,11 +32,6 @@ describe "YahooFinance ISIN" do
                 @obj.exchanges.map{|x| x if x.exchange == "FRA" }.compact.size.should == 1
                 @obj.exchanges.map{|x| x if x.yahoo_symbol == "BMW.BE" }.compact.size.should == 1
             end
-            #it " should only have 1 home_exchange " do
-                #@obj.home_exchange.should be_kind_of(YahooFinance::Exchange)
-                #@obj.home_exchange.exchange.should == "Xetra"
-                #@obj.home_exchange.yahoo_symbol.should == "BMW.DE"
-            #end
         end
         it "should return just what i need" do
             YahooFinance.get_HistoricalQuotes(@obj.exchanges.first.yahoo_symbol,Date.parse("2010-11-11"),Date.parse("2010-11-11")).first.close.should == 54.42

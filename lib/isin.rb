@@ -6,7 +6,7 @@ module YahooFinance
             :exchanges      => "td"
         }
 
-        URL = "http://uk.finsearch.yahoo.com/lookup?s=%"
+        URL = "http://uk.finance.yahoo.com/lookup?s=%"
 
         attr_reader :isin, :exchanges
 
